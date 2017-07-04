@@ -1,7 +1,5 @@
 package ch13;
 
-
-
 public class Rectangle extends GeometricObject {
     private double width;
     private double height;
@@ -42,6 +40,10 @@ public class Rectangle extends GeometricObject {
     @Override /** Return perimeter */
     public double getPerimeter() {
         return 2 * (width + height);
+    }
+
+    public void howToColor() {
+
     }
 }
 

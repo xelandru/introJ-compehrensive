@@ -1,9 +1,7 @@
 package ch13;
 
+public abstract class GeometricObject  implements Colorable{
 
-
-
-public abstract class GeometricObject {
     private String color = "white";
     private boolean filled;
     private java.util.Date dateCreated;
@@ -58,5 +56,4 @@ public abstract class GeometricObject {
     /** Abstract method getPerimeter */
     public abstract double getPerimeter();
 }
-
 

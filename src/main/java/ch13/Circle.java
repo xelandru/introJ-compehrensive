@@ -1,8 +1,8 @@
 package ch13;
 
 
+public class Circle extends GeometricObject implements Comparable{
 
-public class Circle extends GeometricObject {
     private double radius;
 
     public Circle() {
@@ -41,6 +41,25 @@ public class Circle extends GeometricObject {
     public void printCircle() {
         System.out.println("The circle is created " + getDateCreated() +
                 " and the radius is " + radius);
+    }
+
+    public void howToColor() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        return o instanceof Circle && (this == o || this.getArea() == ((Circle) o).getArea());
+    }
+
+    public int compareTo(Object o) {
+        if(this.getArea() < ((Circle) o).getArea())
+            return -1;
+        else if (this.getArea() == ((Circle) o).getArea())
+            return 0;
+        else
+            return 1;
+
     }
 }
 
