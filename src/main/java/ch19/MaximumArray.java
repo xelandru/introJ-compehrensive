@@ -3,7 +3,7 @@ package ch19;
 /**
  * Ex: 19.5
  */
-public class Maximum {
+public class MaximumArray {
 
     public static <E extends Comparable<E>> E max(E[] list) {
         E max = list[0];
