@@ -11,7 +11,7 @@ import java.util.Comparator;
  */
 public class Ex20_21 {
 
-    public static <E> void selctionSort(E[] list, Comparator<? super E> comparator) {
+    public static <E> void selectionSort(E[] list, Comparator<? super E> comparator) {
 
         for (int i = 0; i < list.length - 1; i++) {
             E currentMin = list[i];
@@ -41,7 +41,7 @@ public class Ex20_21 {
                 new Circle(5.2), new Rectangle(0.2, 0.5),
         };
 
-        selctionSort(list, new GeometricObjectComparator());
+        selectionSort(list, new GeometricObjectComparator());
         for (GeometricObject object: list)
             System.out.println(object);
     }
