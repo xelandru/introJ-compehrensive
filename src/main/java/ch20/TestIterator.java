@@ -7,18 +7,33 @@ import java.util.*;
 public class TestIterator {
 	
 	public static void main(String[] args) {
-	
-	Collection<String> collection = new ArrayList<>();
-	collection.add("New York");
-	collection.add("Atalanta");
-	collection.add("Dallas");
-	collection.add("Madison");
 
-	Iterator<String> iterator=  collection.iterator();
-	while(iterator.hasNext()) {
-		System.out.print(iterator.next() + " ");
-	}
+	    LinkedList<Double> list = new LinkedList<>();
+        int i=0;
+        long trashHold = 5_000_000L;
 
-	System.out.println();
+        while (i < trashHold) {
+            list.add(Math.random());
+            i++;
+        }
+
+        long t1 = System.currentTimeMillis();
+        for(int j=0;j<trashHold;j++){
+            list.get(j);
+            if(j % 100_000L == 0)
+                System.out.println(j);
+        }
+        long t2 = System.currentTimeMillis();
+
+        System.out.println(t2 - t1);
+
+        long t3 = System.currentTimeMillis();
+        for(Double d:list)
+            continue;
+        long t4 = System.currentTimeMillis();
+
+        System.out.println(t4 -t3);
+
+
 	}
 }
