@@ -263,6 +263,12 @@ public class DoubleLinkedList<E> extends MyAbstractList<E> {
     }
 
     @Override
+    public boolean retainAll(MyList<E> otherList) {
+        //TODO
+        return false;
+    }
+
+    @Override
     public Iterator<E> iterator() {
         return new DoubleLinkedListIterator();
     }

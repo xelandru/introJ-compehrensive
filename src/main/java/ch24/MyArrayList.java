@@ -1,6 +1,8 @@
 package ch24;
 
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.util.Iterator;
 
 public class MyArrayList<E> extends MyAbstractList<E> {
@@ -75,6 +77,12 @@ public class MyArrayList<E> extends MyAbstractList<E> {
             if(e.equals(data[i]))
                 return i;
         return -1;
+    }
+
+    @Override
+    public boolean retainAll(MyList<E> otherList) {
+        //TODO
+        return false;
     }
 
     @Override

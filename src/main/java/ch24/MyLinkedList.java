@@ -235,6 +235,12 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
     }
 
     @Override
+    public boolean retainAll(MyList<E> otherList) {
+        //TODO
+        return false;
+    }
+
+    @Override
     public Iterator<E> iterator() {
 
 
