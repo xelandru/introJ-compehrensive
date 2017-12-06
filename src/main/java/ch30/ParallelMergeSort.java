@@ -11,7 +11,7 @@ public class ParallelMergeSort {
         int[] list2 = new int[SIZE];
 
         for (int i = 0; i < list1.length; i++)
-            list1[1] = list2[i] = (int) (Math.random() * 10_000_000);
+            list1[i] = list2[i] = (int) (Math.random() * 10_000_000);
         long startTime = System.currentTimeMillis();
         parallelMergeSort(list1);
         long endTime = System.currentTimeMillis();
